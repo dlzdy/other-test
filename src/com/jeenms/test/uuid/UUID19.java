@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class Numbers {
+public class UUID19 {
 
 	final static char[] digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8',
 			'9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
@@ -140,7 +140,7 @@ public class Numbers {
 	}
 	private static String digits(long val, int digits) {
 		long hi = 1L << (digits * 4);
-		return Numbers.toString(hi | (val & (hi - 1)), Numbers.MAX_RADIX)
+		return UUID19.toString(hi | (val & (hi - 1)), UUID19.MAX_RADIX)
 				.substring(1);
 	}
 
@@ -165,7 +165,7 @@ public class Numbers {
 		long currentTime = System.currentTimeMillis();
 		for (int i = 0; i < 100; i++) {
 			currentTime = System.currentTimeMillis();
-			System.out.println(Numbers.uuid());
+			System.out.println(UUID19.uuid());
 			System.out.println(System.currentTimeMillis() - currentTime);
 		}
 		System.out.println(System.currentTimeMillis() - currentTime);
